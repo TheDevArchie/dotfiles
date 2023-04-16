@@ -3,24 +3,15 @@
 user_directory=$HOME
 dot_config_dir="$HOME/.config"
 
-function create_config_dir() {
-	mkdir "$dot_config_dir"
-}
+cd ~/
 
-# Setup top level .config file
-if [ -d "$dot_config_dir" ]; then
-	echo ".config directory exists already"
-else
-	echo ".config directory doesn't exist"
-	create_config_dir
-fi
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
+# Get dotfiles
+git clone https://github.com/spicy-spice-dev/dotfiles.git
 
-if [ -d "$dot_config_dir/nvim" ];
-then
-	echo "~/.config/nvim directory exists"
-fi
+rm -rf ~/.config/nvim
 
-echo $dot_config_dir
-
-
+# Create symlinks
+ln -s ~/dotfiles/nvim ~/.config/nvim
+ln -s ~/dotfiles/nvim_plugins/packer
