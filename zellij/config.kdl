@@ -1,0 +1,9 @@
+theme "catppuccin-macchiato"
+
+pane_frames false
+
+keybinds clear-default=true {
+	tmux {
+		bind "t" { NewTab; SwitchToMode "Normal"; }
+	}
+}

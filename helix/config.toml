@@ -1,0 +1,27 @@
+theme = "tokyonight_storm"
+
+[editor]
+mouse = false
+line-number = "relative"
+cursorline = true
+auto-completion = true
+auto-format = false
+
+[editor.statusline]
+left = ["mode", "position", "total-line-numbers"]
+center = ["file-type"]
+right = ["file-name"]
+
+[editor.cursor-shape]
+normal = "underline"
+insert = "underline"
+select = "underline"
+
+
+# KEY REMAPS
+[keys.insert]
+j = { j = "normal_mode" }
+
+[keys.normal.space]
+q = ":quit"
+w = { q = ":write-quit"}
