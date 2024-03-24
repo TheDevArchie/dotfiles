@@ -45,4 +45,5 @@ git clone https://github.com/BlueNoteCoder/dotfiles.git
 ```
 
 Next symlink this to the ~/.config dir.
-==**NOTE**: Backup what you have in ~/.config first. This will overwrite everything.==
+> [!WARNING]
+>Backup what you have in ~/.config first. This will overwrite everything!
