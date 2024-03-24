@@ -21,7 +21,7 @@ Holds all config files for various software
 
 ### CLI Tools
 [brew](https://brew.sh/)
-
+[lsd](https://github.com/lsd-rs/lsd)
 
 ### Theme
 catppuccin-machiato
@@ -37,3 +37,12 @@ Testing out Orion
 
 ### Misc.
 [AppCleaner](https://freemacsoft.net/appcleaner/)
+
+## How To
+To install clone this repo.
+```sh
+git clone https://github.com/BlueNoteCoder/dotfiles.git
+```
+
+Next symlink this to the ~/.config dir.
+==**NOTE**: Backup what you have in ~/.config first. This will overwrite everything.==
