@@ -1,0 +1,46 @@
+# == Classic ==
+classic: false
+
+# == Blocks ==
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+# == Color ==
+color:
+  when: always
+  theme: default
+
+# == Date ==
+date: '+%D %X'
+
+# == Dereference ==
+dereference: false
+
+# == Icons ==
+icons:
+  when: auto
+  theme: fancy
+  separator: " "
+
+# == Layout ==
+# WTH does this do???
+#layout: tree
+
+# == Permission ==
+permission: octal
+
+# == Sorting ==
+sorting:
+  column: name
+  dir-grouping: last
+
+# == No Symlink ==
+no-symlink: false
+
+
+
