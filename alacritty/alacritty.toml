@@ -15,7 +15,7 @@ blur = true
 multiplier = 1
 
 [font]
-normal = { family = "Hack" }
+normal = { family = "FiraCode Nerd Font" }
 
 [colors]
 cursor = {cursor = "#fc8803"}
