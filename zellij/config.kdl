@@ -3,7 +3,13 @@ theme "catppuccin-macchiato"
 pane_frames false
 
 keybinds clear-default=true {
-	tmux {
-		bind "t" { NewTab; SwitchToMode "Normal"; }
+	normal {
+		bind "Left" { MovePane "Left"; }
+		bind "Right" { MovePane "Right"; }
+		bind "Up" { MovePane "Up"; }
+		bind "Down" { MovePane "Down"; }
+	}
+
+	bind "t" { NewTab; SwitchToMode "Normal"; }
 	}
 }
