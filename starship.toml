@@ -15,7 +15,7 @@ $cmd_duration\
 [directory]
 disabled = false
 style = "fg:crust bg:green"
-format = "[ $path ]($style)"
+format = "[ $path ]($style) "
 
 [git_branch]
 disabled = false
