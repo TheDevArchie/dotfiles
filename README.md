@@ -21,6 +21,7 @@ Holds all config files for various software
 
 ### CLI Tools
 [brew](https://brew.sh/)
+
 [lsd](https://github.com/lsd-rs/lsd)
 
 ### Theme
