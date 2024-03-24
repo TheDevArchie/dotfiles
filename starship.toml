@@ -19,10 +19,11 @@ format = "[ $path ]($style) "
 
 [git_branch]
 disabled = false
+style = "fg:sapphire"
 
 [git_status]
 disabled = false
-style = "bg:blue"
+style = "fg:sapphire"
 
 [palettes.catppucin_macchiato]
 rosewater = "#f4dbd6"
@@ -54,3 +55,11 @@ crust = "#181926"
 
 [cmd_duration]
 show_milliseconds = true
+
+[python]
+disabled = false
+symbol =  " "
+format = "via [${symbol}python (${version})]($style) "
+style = "fg:yellow"
+python_binary = ["/usr/local/bin/python3", "python", " python3"]
+detect_extensions = ["py"]
