@@ -9,8 +9,8 @@ local colors = {
     green = "#1AFFA3",
     --cyan   = '#79dac8',
     cyan = "#48D1CC",
-    --black  = '#080808',
-    black = "#232323",
+    black  = '#080808',
+    -- black = "#232323",
     --white  = '#c6c6c6',
     white = "#BFBFBF",
     yellow = "#FFD700",
@@ -23,14 +23,14 @@ local colors = {
 
 local bubbles_theme = {
     normal = {
-      a = { fg = colors.black, bg = colors.green },
-      b = { fg = colors.white, bg = colors.orange },
-      c = { fg = colors.white },
+      a = { fg = colors.green, bg = colors.black },
+      b = { fg = colors.orange, bg = colors.black },
+      c = { fg = colors.white, bg = colors.black },
     },
 
-    insert = { a = { fg = colors.black, bg = colors.blue } },
-    visual = { a = { fg = colors.black, bg = colors.cyan } },
-    replace = { a = { fg = colors.black, bg = colors.red } },
+    insert = { a = { fg = colors.blue, bg = colors.black } },
+    visual = { a = { fg = colors.cyan, bg = colors.black } },
+    replace = { a = { fg = colors.yellow, bg = colors.black } },
 
     inactive = {
       a = { fg = colors.white, bg = colors.black },
@@ -46,7 +46,7 @@ return {
       require('lualine').setup {
           options = {
           theme = bubbles_theme,
-          component_separators = '',
+          component_separators = '|',
           section_separators = { left = '', right = '' },
         },
         sections = {
