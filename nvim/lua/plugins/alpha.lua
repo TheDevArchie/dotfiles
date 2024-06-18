@@ -30,8 +30,6 @@ return {
             dashboard.button("jj", "👋 Leave me now", "<cmd>qa<CR>")
 			
 		}
-        buttons
-
 
 		for _, button in ipairs(buttons.val) do
 			button.opts.width = 30
