@@ -4,19 +4,27 @@
 
 local colors = {
     neon_blue = '#04D9FF',
-    blue   = '#80a0ff',
-    cyan   = '#79dac8',
-    black  = '#080808',
-    white  = '#c6c6c6',
-    red    = '#ff5189',
+    --blue   = '#80a0ff',
+    blue = "#00BFFF",
+    green = "#1AFFA3",
+    --cyan   = '#79dac8',
+    cyan = "#48D1CC",
+    --black  = '#080808',
+    black = "#232323",
+    --white  = '#c6c6c6',
+    white = "#BFBFBF",
+    yellow = "#FFD700",
+    orange = "#FF7431",
+    --red    = '#ff5189',
+    red = "#FF5454",
     violet = '#d183e8',
     grey   = '#303030',
   }
 
 local bubbles_theme = {
     normal = {
-      a = { fg = colors.black, bg = colors.neon_blue },
-      b = { fg = colors.white, bg = colors.grey },
+      a = { fg = colors.black, bg = colors.green },
+      b = { fg = colors.white, bg = colors.orange },
       c = { fg = colors.white },
     },
 
@@ -37,7 +45,7 @@ return {
   config = function()
       require('lualine').setup {
           options = {
-          theme = "citruszest",
+          theme = bubbles_theme,
           component_separators = '',
           section_separators = { left = '', right = '' },
         },
