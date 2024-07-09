@@ -1,15 +1,67 @@
-theme "catppuccin-macchiato"
-
-pane_frames false
-
 keybinds clear-default=true {
+    locked {
+        bind "Ctrl g" { SwitchToMode "Normal"; }
+        bind "Ctrl f" { ToggleFloatingPanes; }
+    }
 	normal {
-		bind "Left" { MovePane "Left"; }
-		bind "Right" { MovePane "Right"; }
-		bind "Up" { MovePane "Up"; }
-		bind "Down" { MovePane "Down"; }
-	}
+        // Lock
+        bind "Ctrl g" { SwitchToMode "Locked"; }
 
-	bind "t" { NewTab; SwitchToMode "Normal"; }
+        // Pane
+        bind "h" { MoveFocus "Left"; SwitchToMode "Locked"; }
+        bind "j" { MoveFocus "Right"; SwitchToMode "Locked"; }
+        bind "k" { MoveFocus "Up"; SwitchToMode "Locked"; }
+        bind "l" { MoveFocus "Down"; SwitchToMode "Locked"; }
+		bind "H" { MovePane "Left"; }
+		bind "J" { MovePane "Right"; }
+		bind "K" { MovePane "Up"; }
+		bind "L" { MovePane "Down"; }
+
+        bind "p" { NewPane; SwitchToMode "Locked"; }
+        bind "x" { CloseFocus; SwitchToMode "Locked"; }
+
+        bind "m" { ToggleFocusFullscreen; SwitchToMode "Locked"; }
+
+        // Tab
+        bind "t" { NewTab; SwitchToMode "Locked"; }
+        bind "n" { GoToNextTab; }
+        bind "N" { GoToPreviousTab; }
+
+        // Sesh
+        bind "d" { Detach; }
+        bind "s" {
+            LaunchOrFocusPlugin "zellij:session-manager" {
+                floating true
+                move_to_focus_tab true
+            };
+            SwitchToMode "Locked"
+        }
+
 	}
 }
+
+plugins {
+    tab-bar { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    session-manager { path "session-manager"; }
+}
+themes {
+    arctic {
+        bg      "#1E1E1E"
+        fg      "#D4D4D4"
+        red     "#F44747"
+        green   "#6A9955"
+        blue    "#569CD6"
+        yellow  "#D7BA7D"
+        magenta "#C586C0"
+        orange  "#f9ae28"
+        cyan    "#4DC9B0"
+        black   "#1E1E1E"
+        white   "#DDDDDD"
+    }
+}
+pane_frames false
+theme "arctic"
+default_layout "custom"
+default_mode "locked"
+layout_dir ".config/zellij/layouts/"

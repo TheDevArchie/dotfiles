@@ -1,0 +1,29 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            // https://github.com/dj95/zjstatus?tab=readme-ov-file
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                format_left "{mode}"
+                format_right  "{tabs} "
+
+                // mode
+                mode_default_to_mode "locked"
+                mode_normal          "#[fg=magenta] zellij…"
+                mode_rename_tab      "#[fg=magenta] rename tab…"
+                mode_locked          ""
+
+                // tabs
+                tab_normal "#[fg=#808080]{name}"
+                tab_active "{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}"
+                tab_sync_indicator       " 󰓦"
+                tab_fullscreen_indicator " 󰊓"
+                tab_floating_indicator   " 󰉈"
+                tab_separator            "    "
+            }
+        }
+        children
+    }
+    tab name=".config" cwd="~/.config" focus=true
+    tab name="projects" cwd="~/projects"
+    tab name="Messi" cwd="~/"
+}
