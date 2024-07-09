@@ -10,7 +10,7 @@ Holds all config files for various software
 
 
 ### Editor
-[Helix](https://helix-editor.com/)
+[NEOVIM]
 
 
 ### Shell
@@ -24,8 +24,11 @@ Holds all config files for various software
 
 [lsd](https://github.com/lsd-rs/lsd)
 
+[bat]
+
+
 ### Theme
-catppuccin-machiato
+citruszest
 
 
 ### Browser
@@ -42,7 +45,7 @@ Testing out Orion
 ## How To
 To install clone this repo:
 ```sh
-git clone https://github.com/BlueNoteCoder/dotfiles.git
+git clone https://github.com/TheDevArchie/dotfiles.git
 ```
 
 Next symlink this to the ~/.config dir.
@@ -57,3 +60,4 @@ Now symlink the repo to ~/.config.
 ```sh
 ln -s <path to the dotfiles repo> ~/.config  
 ```
+FYI! New method is in the works utilizing Ansible-playbook
