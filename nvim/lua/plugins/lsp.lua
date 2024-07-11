@@ -110,7 +110,8 @@ return {
 			 			},
 			 		},
 			 		python = {
-			 			pythonPath = "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+			 			--pythonPath = "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+                        pythonPath="/Users/spencerarchibald/projects/python/ai_learning/venv/bin/python3"
 			 		},
 			 	},
 			 },

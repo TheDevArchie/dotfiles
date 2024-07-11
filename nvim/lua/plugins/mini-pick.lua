@@ -1,6 +1,6 @@
 return {
     "echasnovski/mini.pick",
-    dependencies = { 
+    dependencies = {
         { "echasnovski/mini.extra", opts = {} },
     },
     config = function()
@@ -40,13 +40,12 @@ return {
         vim.keymap.set("n", "<leader>fo", extra.pickers.options, { desc = "Options" })
         vim.keymap.set("n", "<leader>fw", pick.builtin.grep_live, { desc = "Grep (Live)" })
 
-        vim.keymap.set("n", "<leader>fno", function()
-            local netapp_ontap = "/u/spencera/p4/dev/test/tools/python/nate/rhel7-3.12/lib/python3.12/site-packages/netapp_ontap/resources/"
+        vim.keymap.set("n", "<leader>fn", function()
+            local dotfiles = vim.fn.stdpath 'config'
             pick.start({
                 source = {
-                    cwd = netapp_ontap,
-                    items = vim.fn.readdir(netapp_ontap),
-                    name = "Search netapp_ontap",
+                    cwd = dotfiles,
+                    name = "Search dotfiles",
                 },
             })
         end)

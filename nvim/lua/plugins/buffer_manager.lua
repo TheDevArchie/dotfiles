@@ -13,6 +13,6 @@ return {
 			}
 		})
 		local ui = require("buffer_manager.ui")
-		vim.keymap.set("n", "<leader>hl", ui.toggle_quick_menu)
+		vim.keymap.set("n", "<leader>hl", ui.toggle_quick_menu, {desc="Buffer list"})
 	end,
 }
