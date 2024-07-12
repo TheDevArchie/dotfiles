@@ -1,48 +1,28 @@
-# dotfiles
-Holds all config files for various software
+Info related to all the software currently in use.
+
 
 ### Terminal
-[Alacritty](https://alacritty.org/)
-
-
-### Terminal Multiplexer
-[Zellij](https://zellij.dev/)
-
-
-### Editor
-[NEOVIM]
-
-
-### Shell
-[zsh](https://www.zsh.org/)
-
-[Starship](https://starship.rs/)
+  - Emulator: [kitty](https://sw.kovidgoyal.net/kitty/)
+  - Multiplexer: [Zellij](https://zellij.dev/)
+  - Editor: Neovim
+    - Theme: citruszest
+  - shell: [zsh](https://www.zsh.org/)
+  - shell prompt editor: [Starship](https://starship.rs/)
 
 
 ### CLI Tools
-[brew](https://brew.sh/)
-
-[lsd](https://github.com/lsd-rs/lsd)
-
-[bat]
+  - [brew](https://brew.sh/)
+  - [lsd](https://github.com/lsd-rs/lsd)
+  - bat
 
 
-### Theme
-citruszest
+### Apps
+  - Browser: Arc
+  - [RayCast](https://www.raycast.com/)
+  - [AppCleaner](https://freemacsoft.net/appcleaner/)
 
 
-### Browser
-Testing out Orion
-
-
-### Productivity
-[RayCast](https://www.raycast.com/)
-
-
-### Misc.
-[AppCleaner](https://freemacsoft.net/appcleaner/)
-
-## How To
+### How To
 To install clone this repo:
 ```sh
 git clone https://github.com/TheDevArchie/dotfiles.git
@@ -60,4 +40,4 @@ Now symlink the repo to ~/.config.
 ```sh
 ln -s <path to the dotfiles repo> ~/.config  
 ```
-FYI! New method is in the works utilizing Ansible-playbook
+FYI! New method utilizing Ansible-playbook is in the works.
