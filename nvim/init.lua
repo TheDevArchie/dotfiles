@@ -21,6 +21,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { import = "plugins" },
+    { import = "plugins.editing" },
+    { import = "plugins.lsp" },
+    { import = "plugins.performance" },
+    { import = "plugins.ui" },
 })
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<CR>", { desc = "Lazyness" })
 
@@ -38,6 +42,7 @@ require("citruszest").setup({
     Constant = { fg = "#FFFFFF", bold = true}
     },
 })
+
 -- Theme
 vim.opt.background = "dark"
 --vim.cmd.colorscheme "oxocarbon"
