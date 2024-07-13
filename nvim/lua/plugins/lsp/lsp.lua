@@ -107,11 +107,13 @@ return {
 			 		basedpyright = {
 			 			analysis = {
 			 				typeCheckingMode = "off",
+                            diagnosticMode = "openFilesOnly",
 			 			},
 			 		},
 			 		python = {
 			 			--pythonPath = "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
-                        pythonPath="/Users/spencerarchibald/projects/python/ai_learning/venv/bin/python3"
+                        -- pythonPath="/Users/spencerarchibald/projects/python/ai_learning/venv/bin/python3"
+                        pythonPath="/Users/spencerarchibald/projects/python/spade_me/venv/bin/python3"
 			 		},
 			 	},
 			 },
