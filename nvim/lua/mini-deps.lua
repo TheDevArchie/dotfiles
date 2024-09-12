@@ -37,9 +37,11 @@ now(function()
         source = 'folke/noice.nvim',
         depends = { 'MunifTanjim/nui.nvim' },
     })
+    add('nvim-lualine/lualine.nvim')
 
     require('plugins.ui.colorscheme')
     require('plugins.ui.noice')
+    require('plugins.ui.lualine')
 end)
 
 -- load modules later
