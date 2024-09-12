@@ -5,7 +5,7 @@ Info related to all the software currently in use.
   - Emulator: [kitty](https://sw.kovidgoyal.net/kitty/)
   - Multiplexer: [Zellij](https://zellij.dev/)
   - Editor: Neovim
-    - Theme: citruszest
+    - Theme: eldritch
   - shell: [zsh](https://www.zsh.org/)
   - shell prompt editor: [Starship](https://starship.rs/)
 
@@ -13,11 +13,11 @@ Info related to all the software currently in use.
 ### CLI Tools
   - [brew](https://brew.sh/)
   - [lsd](https://github.com/lsd-rs/lsd)
-  - bat
+  - [bat]
 
 
 ### Apps
-  - Browser: Arc
+  - [Zen](https://zen-browser.app/)
   - [RayCast](https://www.raycast.com/)
   - [AppCleaner](https://freemacsoft.net/appcleaner/)
 
@@ -38,6 +38,6 @@ Now symlink the repo to ~/.config.
 > You may have to use absolute paths.
 
 ```sh
-ln -s <path to the dotfiles repo> ~/.config  
+ln -s <path to the dotfiles repo> ~/.config
 ```
 FYI! New method utilizing Ansible-playbook is in the works.
