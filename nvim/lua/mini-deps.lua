@@ -44,6 +44,12 @@ end)
 
 -- load modules later
 later(function()
+    add({
+        source = 'j-morano/buffer_manager.nvim',
+        depends = { 'nvim-lua/plenary.nvim' }
+    })
+
+    vim.cmd('runtime! lua/plugins/ui/buffer_manager.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
 end)
