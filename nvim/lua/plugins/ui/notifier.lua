@@ -1,7 +1,5 @@
-return {
-  "vigoux/notifier.nvim",
-  config = function()
-    require('notifier').setup({
-    })
-  end,
-}
+require('notifier').setup({
+    notify = {
+        clear_time = 10000,
+    }
+})

@@ -38,12 +38,14 @@ now(function()
         depends = { 'MunifTanjim/nui.nvim' },
     })
     add('nvim-lualine/lualine.nvim')
+    add('vigoux/notifier.nvim')
 
     require('plugins.ui.colorscheme')
     require('plugins.ui.noice')
     require('plugins.ui.mini-indentscope')
     require('plugins.ui.lualine')
     require('plugins.ui.mini-trailspace')
+    require('plugins.ui.notifier')
 end)
 
 -- load modules later
