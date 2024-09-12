@@ -40,14 +40,9 @@ now(function()
     add('nvim-lualine/lualine.nvim')
     add('vigoux/notifier.nvim')
     add('goolord/alpha-nvim')
-
-    require('plugins.ui.colorscheme')
-    require('plugins.ui.noice')
-    require('plugins.ui.mini-indentscope')
-    require('plugins.ui.lualine')
-    require('plugins.ui.mini-trailspace')
-    require('plugins.ui.notifier')
+    
     require('plugins.ui.alpha')
+
 end)
 
 -- load modules later
@@ -58,7 +53,7 @@ later(function()
     })
     add('ethanholz/nvim-lastplace')
 
-    vim.cmd('runtime! lua/plugins/ui/buffer_manager.lua')
+    vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
 
