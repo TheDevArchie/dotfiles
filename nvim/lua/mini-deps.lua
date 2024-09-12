@@ -45,4 +45,5 @@ end)
 -- load modules later
 later(function()
     vim.cmd('runtime! lua/plugins/mini-files.lua')
+    vim.cmd('runtime! lua/plugins/mini-pick.lua')
 end)
