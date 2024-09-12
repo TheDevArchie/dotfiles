@@ -41,6 +41,7 @@ now(function()
 
     require('plugins.ui.colorscheme')
     require('plugins.ui.noice')
+    require('plugins.ui.mini-indentscope')
     require('plugins.ui.lualine')
 end)
 
