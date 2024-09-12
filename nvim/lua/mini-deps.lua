@@ -57,6 +57,7 @@ later(function()
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
+    vim.cmd('runtime! lua/plugins/mini-clue.lua')
 
     vim.cmd('runtime! lua/plugins/editing/*.lua')
 end)

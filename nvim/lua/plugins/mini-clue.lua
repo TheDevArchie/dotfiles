@@ -1,22 +1,20 @@
-return {
-  "echasnovski/mini.clue",
-  config = function()
-    local clue = require("mini.clue")
-    clue.setup({
-      window = {
+local clue = require("mini.clue")
+
+clue.setup({
+    window = {
         delay = 250,
         config = function(bufnr)
-          local max_width = 0
-          for _, line in ipairs(vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)) do
-            max_width = math.max(max_width, vim.fn.strchars(line))
-          end
-          max_width = max_width + 1
-          return {
-            width = math.min(40, max_width),
-          }
+            local max_width = 0
+            for _, line in ipairs(vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)) do
+                max_width = math.max(max_width, vim.fn.strchars(line))
+            end
+            max_width = max_width + 1
+            return {
+                width = math.min(40, max_width),
+            }
         end,
-      },
-      triggers = {
+    },
+    triggers = {
         { mode = "n", keys = "<leader>" },
         { mode = "x", keys = "<leader>" },
         { mode = "n", keys = "g" },
@@ -36,8 +34,8 @@ return {
         -- surround/substitute operators
         { mode = "n", keys = "s" },
         { mode = "x", keys = "s" },
-      },
-      clues = {
+    },
+    clues = {
         -- clue.gen_clues.g(),
         clue.gen_clues.windows(),
         clue.gen_clues.registers(),
@@ -53,7 +51,5 @@ return {
         -- buffers
         { mode = "n", keys = "<leader><Tab>", postkeys = "<leader>" },
         { mode = "n", keys = "<leader><S-Tab>", postkeys = "<leader>" },
-      },
-    })
-  end,
-}
+    },
+})
