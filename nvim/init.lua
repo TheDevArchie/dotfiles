@@ -21,9 +21,4 @@ safe_require("mini-deps")
 --     },
 -- })
 --
--- Theme
-vim.opt.background = "dark"
---vim.cmd.colorscheme "oxocarbon"
--- vim.cmd.colorscheme "citruszest"
-
 print("Welcome to SnoreTown")
