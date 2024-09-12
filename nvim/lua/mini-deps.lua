@@ -53,6 +53,7 @@ later(function()
     })
     add('ethanholz/nvim-lastplace')
     add('roobert/search-replace.nvim')
+    add('folke/flash.nvim')
 
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
