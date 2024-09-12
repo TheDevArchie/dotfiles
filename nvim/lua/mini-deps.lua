@@ -39,6 +39,7 @@ now(function()
     })
     add('nvim-lualine/lualine.nvim')
     add('vigoux/notifier.nvim')
+    add('goolord/alpha-nvim')
 
     require('plugins.ui.colorscheme')
     require('plugins.ui.noice')
@@ -46,6 +47,7 @@ now(function()
     require('plugins.ui.lualine')
     require('plugins.ui.mini-trailspace')
     require('plugins.ui.notifier')
+    require('plugins.ui.alpha')
 end)
 
 -- load modules later
