@@ -40,7 +40,7 @@ now(function()
     add('nvim-lualine/lualine.nvim')
     add('vigoux/notifier.nvim')
     add('goolord/alpha-nvim')
-    
+
     require('plugins.ui.alpha')
 
 end)
@@ -52,10 +52,11 @@ later(function()
         depends = { 'nvim-lua/plenary.nvim' }
     })
     add('ethanholz/nvim-lastplace')
+    add('roobert/search-replace.nvim')
 
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
 
-    vim.cmd('runtime! lua/plugins/editing/nvim-lastplace.lua')
+    vim.cmd('runtime! lua/plugins/editing/*.lua')
 end)
