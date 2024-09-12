@@ -48,8 +48,11 @@ later(function()
         source = 'j-morano/buffer_manager.nvim',
         depends = { 'nvim-lua/plenary.nvim' }
     })
+    add('ethanholz/nvim-lastplace')
 
     vim.cmd('runtime! lua/plugins/ui/buffer_manager.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
+
+    vim.cmd('runtime! lua/plugins/editing/nvim-lastplace.lua')
 end)
