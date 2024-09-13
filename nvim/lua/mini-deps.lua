@@ -47,13 +47,22 @@ end)
 -- load modules later
 later(function()
     add({
+        source = 'nvim-treesitter/nvim-treesitter',
+        depends = { 'nvim-treesitter/nvim-treesitter-context' }
+    })
+    add({
         source = 'j-morano/buffer_manager.nvim',
         depends = { 'nvim-lua/plenary.nvim' }
     })
+
+    -- editing
+    add('roobert/f-string-toggle.nvim')
     add('ethanholz/nvim-lastplace')
     add('roobert/search-replace.nvim')
     add('folke/flash.nvim')
     add('monaqa/dial.nvim')
+    add('numTostr/comment.nvim')
+
 
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
