@@ -55,6 +55,29 @@ later(function()
         depends = { 'nvim-lua/plenary.nvim' }
     })
 
+    -- lsp
+    add({
+        source = 'neovim/nvim-lspconfig',
+        depends = {
+            'hrsh7th/cmp-nvim-lsp',
+            'folke/lazydev.nvim'
+        },
+    })
+
+    -- cmp
+    add({
+        source = 'hrsh7th/nvim-cmp',
+        depends = {
+            "hrsh7th/cmp-nvim-lsp",
+            -- "hrsh7th/cmp-nvim-lsp-signature-help",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-cmdline",
+            "hrsh7th/cmp-calc",
+            "dmitmel/cmp-cmdline-history",
+        }
+    })
+
     -- editing
     add('roobert/f-string-toggle.nvim')
     add('ethanholz/nvim-lastplace')
@@ -62,10 +85,13 @@ later(function()
     add('folke/flash.nvim')
     add('monaqa/dial.nvim')
     add('numTostr/comment.nvim')
-
+    add('echasnovski/mini.splitjoin')
+    add('sitiom/nvim-numbertoggle')
 
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/mini-files.lua')
+    vim.cmd('runtime! lua/plugins/mini-splitjoin.lua')
+    vim.cmd('runtime! lua/plugins/nvim-toggle.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
     vim.cmd('runtime! lua/plugins/mini-clue.lua')
 
