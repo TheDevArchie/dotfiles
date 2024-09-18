@@ -80,11 +80,6 @@ later(function()
         }
     })
 
-    vim.cmd('runtime! lua/plugins/mini-files.lua')
-    vim.cmd('runtime! lua/plugins/mini-splitjoin.lua')
-    vim.cmd('runtime! lua/plugins/nvim-toggle.lua')
-    vim.cmd('runtime! lua/plugins/mini-pick.lua')
-    vim.cmd('runtime! lua/plugins/mini-clue.lua')
     vim.cmd('runtime! lua/plugins/lsp/lsp_signature.lua')
 
 
@@ -102,15 +97,7 @@ later(function()
     add('tamton-aquib/duck.nvim')
 
     vim.cmd('runtime! lua/plugins/ui/*.lua')
-    vim.cmd('runtime! lua/plugins/mini-files.lua')
-    vim.cmd('runtime! lua/plugins/mini-splitjoin.lua')
-    vim.cmd('runtime! lua/plugins/nvim-toggle.lua')
-    vim.cmd('runtime! lua/plugins/mini-pick.lua')
-    vim.cmd('runtime! lua/plugins/mini-clue.lua')
-    vim.cmd('runtime! lua/plugins/mini-move.lua')
-    vim.cmd('runtime! lua/plugins/mini-basics.lua')
-    vim.cmd('runtime! lua/plugins/duck.lua')
-    vim.cmd('runtime! lua/plugins/cmp.lua')
+    vim.cmd('runtime! lua/plugins/*.lua')
     vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
 
 
