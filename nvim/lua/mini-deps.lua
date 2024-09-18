@@ -1,5 +1,6 @@
 local path_package = vim.fn.stdpath('data') .. '/site/'
 local mini_path = path_package .. 'pack/deps/start/mini.nvim'
+
 ---@diagnostic disable-next-line: undefined-field
 if not vim.loop.fs_stat(mini_path) then
     vim.cmd('echo "Installing `mini.nvim`" | redraw')
@@ -63,6 +64,7 @@ later(function()
             'folke/lazydev.nvim'
         },
     })
+	add('ray-x/lsp_signature.nvim')
 
     -- cmp
     add({
@@ -77,6 +79,14 @@ later(function()
             "dmitmel/cmp-cmdline-history",
         }
     })
+
+    vim.cmd('runtime! lua/plugins/mini-files.lua')
+    vim.cmd('runtime! lua/plugins/mini-splitjoin.lua')
+    vim.cmd('runtime! lua/plugins/nvim-toggle.lua')
+    vim.cmd('runtime! lua/plugins/mini-pick.lua')
+    vim.cmd('runtime! lua/plugins/mini-clue.lua')
+    vim.cmd('runtime! lua/plugins/lsp/lsp_signature.lua')
+
 
     -- editing
     add('roobert/f-string-toggle.nvim')
@@ -94,6 +104,9 @@ later(function()
     vim.cmd('runtime! lua/plugins/nvim-toggle.lua')
     vim.cmd('runtime! lua/plugins/mini-pick.lua')
     vim.cmd('runtime! lua/plugins/mini-clue.lua')
+    vim.cmd('runtime! lua/plugins/cmp.lua')
+    vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
+
 
     vim.cmd('runtime! lua/plugins/editing/*.lua')
 end)
