@@ -95,6 +95,7 @@ later(function()
     add('echasnovski/mini.basics')
     add('sitiom/nvim-numbertoggle')
     add('tamton-aquib/duck.nvim')
+    add('norcalli/nvim-colorizer.lua')
 
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/*.lua')
