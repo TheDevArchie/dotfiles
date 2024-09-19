@@ -11,5 +11,18 @@ themes {
         cyan "#91d7e3" // Sky
         black "#1e2030" // Mantle
         white "#cad3f5"
-    } 
+    }
+    eldritch {
+        bg "#212337"
+        fg "#ebfafa"
+        red "#f16c75"
+        green "#37f499"
+        blue "#8aadf4"
+        yellow "#f1fc79"
+        magenta "#a48cf2"
+        orange "#f7c67f"
+        cyan "#04d1f9"
+        black "#1e2030"
+        white "#cad3f5"
+    }
 }

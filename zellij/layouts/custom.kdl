@@ -8,13 +8,13 @@ layout {
 
                 // mode
                 mode_default_to_mode "locked"
-                mode_normal          "#[fg=magenta] zellij…"
-                mode_rename_tab      "#[fg=magenta] rename tab…"
+                mode_normal          "zellij…"
+                mode_rename_tab      "#[bg=white, fg=black] rename tab…"
                 mode_locked          ""
 
                 // tabs
-                tab_normal "#[fg=#808080]{name}"
-                tab_active "{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}"
+                tab_normal "#[fg=black]{name}"
+                tab_active "#[fg=white, bg=black] {name}{floating_indicator}{fullscreen_indicator}{sync_indicator}"
                 tab_sync_indicator       " 󰓦"
                 tab_fullscreen_indicator " 󰊓"
                 tab_floating_indicator   " 󰉈"
