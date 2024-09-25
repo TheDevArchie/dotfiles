@@ -4,7 +4,7 @@ layout {
             // https://github.com/dj95/zjstatus?tab=readme-ov-file
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
                 format_left "{mode}"
-                format_right  "{tabs} "
+                format_right  "{tabs}"
 
                 // mode
                 mode_default_to_mode "locked"
@@ -13,7 +13,7 @@ layout {
                 mode_locked          ""
 
                 // tabs
-                tab_normal "#[fg=black]{name}"
+                tab_normal "#[fg=black]{name} {floating_indicator}{fullscreen_indicator}{sync_indicator}"
                 tab_active "#[fg=white, bg=black] {name}{floating_indicator}{fullscreen_indicator}{sync_indicator}"
                 tab_sync_indicator       " 󰓦"
                 tab_fullscreen_indicator " 󰊓"

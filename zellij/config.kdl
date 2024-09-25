@@ -9,13 +9,13 @@ keybinds clear-default=true {
 
         // Pane
         bind "h" { MoveFocus "Left"; SwitchToMode "Locked"; }
-        bind "j" { MoveFocus "Right"; SwitchToMode "Locked"; }
-        bind "k" { MoveFocus "Up"; SwitchToMode "Locked"; }
-        bind "l" { MoveFocus "Down"; SwitchToMode "Locked"; }
+        bind "j" { MoveFocus "Up"; SwitchToMode "Locked"; }
+        bind "k" { MoveFocus "Down"; SwitchToMode "Locked"; }
+        bind "l" { MoveFocus "Right"; SwitchToMode "Locked"; }
 		bind "H" { MovePane "Left"; }
-		bind "J" { MovePane "Right"; }
-		bind "K" { MovePane "Up"; }
-		bind "L" { MovePane "Down"; }
+		bind "J" { MovePane "Up"; }
+		bind "K" { MovePane "Down"; }
+		bind "L" { MovePane "Right"; }
 
         bind "p" { NewPane; SwitchToMode "Locked"; }
         bind "x" { CloseFocus; SwitchToMode "Locked"; }
@@ -24,6 +24,7 @@ keybinds clear-default=true {
 
         // Tab
         bind "t" { NewTab; SwitchToMode "Locked"; }
+        bind "X" { CloseTab; SwitchToMode "Locked"; }
         bind "n" { GoToNextTab; }
         bind "N" { GoToPreviousTab; }
 
