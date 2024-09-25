@@ -51,6 +51,12 @@ later(function()
         source = 'nvim-treesitter/nvim-treesitter',
         depends = { 'nvim-treesitter/nvim-treesitter-context' }
     })
+
+    add({
+        source = 'nvim-telescope/telescope.nvim',
+        depends = { 'nvim-lua/plenary.nvim' }
+    })
+
     add({
         source = 'j-morano/buffer_manager.nvim',
         depends = { 'nvim-lua/plenary.nvim' }
