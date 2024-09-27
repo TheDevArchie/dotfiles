@@ -14,6 +14,7 @@ Info related to all the software currently in use.
   - [brew](https://brew.sh/)
   - [lsd](https://github.com/lsd-rs/lsd)
   - [bat]
+  - [spicetify](https://spicetify.app/)
 
 
 ### Apps
