@@ -38,6 +38,14 @@ keybinds clear-default=true {
             SwitchToMode "Locked"
         }
 
+        // resize
+        bind "=" { Resize "Increase"; }
+        bind "-" { Resize "Decrease"; }
+        // bind "Ctrl Left"  { Resize "Increase Left";  }
+        // bind "Ctrl Down"  { Resize "Increase Down";  }
+        // bind "Ctrl Up"    { Resize "Increase Up";    }
+        // bind "Ctrl Right" { Resize "Increase Right"; }
+
 	}
 }
 

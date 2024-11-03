@@ -23,7 +23,7 @@ layout {
         }
         children
     }
-    tab name=".config" cwd="~/.config" focus=true
-    tab name="projects" cwd="~/projects"
+    tab name=".config" cwd="~/.config"
+    tab name="projects" cwd="~/projects" focus=true
     tab name="Messi" cwd="~/"
 }
