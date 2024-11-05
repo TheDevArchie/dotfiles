@@ -7,16 +7,15 @@ local utils = require('telescope.utils')
 
 telescope.setup({
     defaults = {
-        sorting_strategy = "descending",
+        sorting_strategy = "ascending",
         scroll_strategy = "limit",
-        layout_strategy = "horizontal",
+        -- layout_strategy = 'vertical',
         layout_config = {
             horizontal = {
                 height = 0.5,
                 prompt_position = "top"
             },
         },
-        --borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
         path_display = { "truncate" },
         dynamic_preview_title = true,
         results_title = false,
@@ -33,6 +32,41 @@ telescope.setup({
         preview = { hide_on_startup = true }
     }
 })
+
+local colors = {
+  blue   = "#00BFFF",
+  cyan   = '#79dac8',
+  green  = "#1AFFA3",
+  black  = '#080808',
+  white  = '#c6c6c6',
+  red    = '#ff5189',
+  purple = '#7600bc',
+  orange = "#FF7431",
+  dark_orange = 'FF4D00',
+  violet = '#d183e8',
+  grey   = '#303030',
+}
+
+local TelescopeColor = {
+	-- TelescopeMatching = { fg = colors.blue, bg = colors.blue},
+	TelescopeSelection = { fg = colors.black, bg = colors.cyan, bold = true },
+
+	TelescopePromptPrefix = { bg = nil ,fg = colors.red },
+	-- TelescopePromptNormal = { bg = colors.dark_orange },
+	-- TelescopeResultsNormal = { bg = colors.dark_orange },
+	-- TelescopePreviewNormal = { bg = colors.grey },
+	TelescopePromptBorder = { bg = nil, fg = colors.orange },
+	TelescopeResultsBorder = { bg = nil, fg = colors.orange },
+	TelescopePreviewBorder = { bg = nil, fg = colors.orange },
+	-- TelescopePromptTitle = { bg = colors.white, fg = colors.blue },
+	-- TelescopeResultsTitle = { fg = colors.blue },
+	-- TelescopePreviewTitle = { bg = colors.green, fg = colors.blue },
+}
+
+for hl, col in pairs(TelescopeColor) do
+	vim.api.nvim_set_hl(0, hl, col)
+end
+
 
 -- KeyMaps
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
