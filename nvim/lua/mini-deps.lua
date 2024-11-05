@@ -58,9 +58,15 @@ later(function()
     })
 
     add({
-        source = 'j-morano/buffer_manager.nvim',
+        source = 'ThePrimeagen/harpoon',
+        checkout = 'harpoon2',
         depends = { 'nvim-lua/plenary.nvim' }
     })
+
+    -- add({
+    --     source = 'j-morano/buffer_manager.nvim',
+    --     depends = { 'nvim-lua/plenary.nvim' }
+    -- })
 
     -- lsp
     add({
