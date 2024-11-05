@@ -3,7 +3,7 @@ leader = "alt"
 
 for key, name in pairs({
     ["1"] = "Spotify",
-    ["2"] = "kitty",
+    ["2"] = "Wezterm",
     ["3"] = "Slack",
     ["4"] = "Linear",
     ["5"] = "Obsidian",
