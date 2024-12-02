@@ -1,8 +1,8 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.font = wezterm.font('FiraCode Nerd Font')
-config.color_scheme = 'spaceduck'
+config.font = wezterm.font('CaskaydiaMono Nerd Font')
+config.color_scheme = 'kawagana'
 
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
