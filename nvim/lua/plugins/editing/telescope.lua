@@ -70,6 +70,7 @@ end
 
 -- KeyMaps
 vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
 vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Recent Files" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Search Help" })
 vim.keymap.set('n', '<leader>ft', builtin.colorscheme, { desc = 'Search Colorschemes' })
