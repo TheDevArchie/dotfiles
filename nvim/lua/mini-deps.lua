@@ -33,6 +33,7 @@ now(function()
     -- add('nyoom-engineering/oxocarbon.nvim')
     -- add('zootedb0t/citruszest.nvim')
     add('pineapplegiant/spaceduck')
+    add("rebelot/kanagawa.nvim")
 
     add({
         source = 'folke/noice.nvim',
@@ -57,6 +58,11 @@ later(function()
         source = 'nvim-telescope/telescope.nvim',
         depends = { 'nvim-lua/plenary.nvim' }
     })
+
+    -- add({
+    --     source = "adriankarlen/buffed.nvim",
+    --     depends = { "echasnovski/mini.icons" }
+    -- })
 
     add({
         source = 'ThePrimeagen/harpoon',
