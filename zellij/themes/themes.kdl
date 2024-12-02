@@ -25,4 +25,17 @@ themes {
         black "#1e2030"
         white "#cad3f5"
     }
+    spaceduck {
+        bg "#0f111b"
+        fg "#ecf0c1"
+        red "#e33400"
+        green "#5ccc96"
+        blue "#00a3cc"
+        yellow "#f2ce00"
+        magenta "#7a5ccc"
+        black "#000000"
+        white "#f0f1ce"
+        orange "#f7c67f"
+        cyan "#91d7e3" // Sky
+    }
 }

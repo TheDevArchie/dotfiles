@@ -55,7 +55,7 @@ plugins {
     session-manager { path "session-manager"; }
 }
 pane_frames false
-theme "eldritch"
+theme "spaceduck"
 default_layout "custom"
 default_mode "locked"
 layout_dir ".config/zellij/layouts/"
