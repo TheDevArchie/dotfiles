@@ -45,6 +45,7 @@ require('lualine').setup({
     },
     lualine_x = {
         {
+        -- https://github.com/folke/noice.nvim/wiki/Configuration-Recipes#show-recording-messages
             require("noice").api.statusline.mode.get,
             cond = require("noice").api.statusline.mode.has,
             color = { fg = "#d183e8" },
