@@ -2,12 +2,13 @@ Info related to all the software currently in use.
 
 
 ### Terminal
-  - Emulator: [kitty](https://sw.kovidgoyal.net/kitty/)
+  - Emulator: [WezTerm](https://wezfurlong.org/wezterm/index.html)
   - Multiplexer: [Zellij](https://zellij.dev/)
   - Editor: Neovim
-    - Theme: eldritch
+    - Theme: SpaceDuck
   - shell: [zsh](https://www.zsh.org/)
   - shell prompt editor: [Starship](https://starship.rs/)
+  - LazyGit
 
 
 ### CLI Tools
@@ -21,6 +22,8 @@ Info related to all the software currently in use.
   - [Zen](https://zen-browser.app/)
   - [RayCast](https://www.raycast.com/)
   - [AppCleaner](https://freemacsoft.net/appcleaner/)
+  - AltTab
+  - HammerSpoon
 
 
 ### How To
