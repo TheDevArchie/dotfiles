@@ -59,11 +59,6 @@ later(function()
         depends = { 'nvim-lua/plenary.nvim' }
     })
 
-    -- add({
-    --     source = "adriankarlen/buffed.nvim",
-    --     depends = { "echasnovski/mini.icons" }
-    -- })
-
     add({
         source = 'ThePrimeagen/harpoon',
         checkout = 'harpoon2',
