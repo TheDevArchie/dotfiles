@@ -28,10 +28,11 @@ vim.keymap.set('n', '<leader>mu', '<cmd>DepsShowLog<cr><cmd>', { desc = 'Mini.de
 -- load modules now
 now(function()
     -- Colorschemes/UI
-    add('eldritch-theme/eldritch.nvim')
-    add('0xstepit/flow.nvim')
-    add('nyoom-engineering/oxocarbon.nvim')
-    add('zootedb0t/citruszest.nvim')
+    -- add('eldritch-theme/eldritch.nvim')
+    -- add('0xstepit/flow.nvim')
+    -- add('nyoom-engineering/oxocarbon.nvim')
+    -- add('zootedb0t/citruszest.nvim')
+    add('pineapplegiant/spaceduck')
 
     add({
         source = 'folke/noice.nvim',
