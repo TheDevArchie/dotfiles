@@ -1,0 +1,93 @@
+[colors]
+ansi = [
+    "#000000",
+    "#e33400",
+    "#5ccc96",
+    "#b3a1e6",
+    "#00a3cc",
+    "#ce6f8f",
+    "#7a5ccc",
+    "#686f9a",
+    "#686f9a",
+    "#e33400",
+    "#5ccc96",
+    "#b3a1e6",
+    "#00a3cc",
+    "#ce6f8f",
+    "#7a5ccc",
+    "#ecf0c1"
+]
+background = '#0f111b'
+brights = [
+    '#686f9a'
+    '#e33400'
+    '#5ccc96'
+    '#b3a1e6'
+    '#00a3cc'
+    '#f2ce00'
+    '#7a5ccc'
+    '#f0f1ce'
+]
+compose_cursor = '#f7c67f'
+# cursor_bg = '#818596'
+cursor_bg = '#ecf0c1'
+cursor_border = '#04d1f9'
+# cursor_fg = '#0f111b'
+cursor_fg = '#ecf0c1'
+foreground = '#ecf0c1'
+scrollbar_thumb = '#37f499'
+selection_bg = '#686f9a'
+selection_fg = '#ffffff'
+split = '#a48cf2'
+
+# [colors.indexed]
+#
+# [colors.tab_bar]
+# background = '#212337'
+#
+# [colors.tab_bar.active_tab]
+# bg_color = '#37f499'
+# fg_color = '#212337'
+# intensity = 'Normal'
+# italic = false
+# strikethrough = false
+# underline = 'None'
+#
+# [colors.tab_bar.inactive_tab]
+# bg_color = '#212337'
+# fg_color = '#04d1f9'
+# intensity = 'Normal'
+# italic = false
+# strikethrough = false
+# underline = 'None'
+#
+# [colors.tab_bar.inactive_tab_hover]
+# bg_color = '#37f499'
+# fg_color = '#212337'
+# intensity = 'Normal'
+# italic = true
+# strikethrough = false
+# underline = 'None'
+#
+# [colors.tab_bar.new_tab]
+# bg_color = '#212337'
+# fg_color = '#ebfafa'
+# intensity = 'Normal'
+# italic = false
+# strikethrough = false
+# underline = 'None'
+#
+# [colors.tab_bar.new_tab_hover]
+# bg_color = '#37f499'
+# fg_color = '#ebfafa'
+# intensity = 'Normal'
+# italic = true
+# strikethrough = false
+# underline = 'None'
+#
+
+[metadata]
+aliases = []
+# author = 'jacobrreed'
+name = 'Spaceduck'
+# origin_url = 'https://github.com/eldritch-theme/eldritch/ports/terminal/wezterm'

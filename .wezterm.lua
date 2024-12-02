@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
 config.font = wezterm.font('FiraCode Nerd Font')
-config.color_scheme = 'Eldritch'
+config.color_scheme = 'spaceduck'
 
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
