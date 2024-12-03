@@ -5,4 +5,4 @@
 --     aggressive_spell = false, -- Display colors for spell check.
 -- })
 
-vim.cmd('colorscheme spaceduck')
+vim.cmd('colorscheme kanagawa-wave')
