@@ -1,4 +1,4 @@
-local files = require("mini.files")
+local files    = require("mini.files")
 
 files.setup({
     mappings = {
@@ -12,6 +12,9 @@ files.setup({
         width_focus = math.floor(0.15 * vim.o.columns),
         width_nofocus = math.floor(0.15 * vim.o.columns),
         width_preview = math.floor(0.33 * vim.o.columns),
+    },
+    options = {
+        use_as_default_explorer = true,
     },
 })
 

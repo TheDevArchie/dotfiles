@@ -42,7 +42,8 @@ now(function()
     add('nvim-lualine/lualine.nvim')
     add('vigoux/notifier.nvim')
     add('goolord/alpha-nvim')
-
+    add({ source = 'echasnovski/mini.files', checkout = 'stable' }) -- Needed NOW to disable netrw
+    vim.cmd('runtime! lua/plugins/mini-files.lua') -- Needed NOW to disable netrw
     require('plugins.ui.alpha')
 
 end)
@@ -64,11 +65,6 @@ later(function()
         checkout = 'harpoon2',
         depends = { 'nvim-lua/plenary.nvim' }
     })
-
-    -- add({
-    --     source = 'j-morano/buffer_manager.nvim',
-    --     depends = { 'nvim-lua/plenary.nvim' }
-    -- })
 
     -- lsp
     add({
@@ -107,6 +103,10 @@ later(function()
     add('echasnovski/mini.splitjoin')
     add('echasnovski/mini.move')
     add('echasnovski/mini.basics')
+    add({
+        source = 'echasnovski/mini.jump',
+        checkout = 'stable'
+    })
     add('sitiom/nvim-numbertoggle')
     add('tamton-aquib/duck.nvim')
     add('norcalli/nvim-colorizer.lua')
