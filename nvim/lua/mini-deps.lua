@@ -117,4 +117,5 @@ later(function()
 
 
     vim.cmd('runtime! lua/plugins/editing/*.lua')
+    vim.cmd('LspStart')
 end)

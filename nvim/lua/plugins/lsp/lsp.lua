@@ -1,3 +1,33 @@
+-- For Ruff lsp, ruff and ruff_lsp need to be installed first
+-- pip install ruff_lsp
+-- https://github.com/astral-sh/ruff-lsp?tab=readme-ov-file
+
+local function get_python_path()
+    local handle = io.open("which python3")
+
+    if handle == nil then
+        return ""
+    end
+
+    local interpreter_path = handle:read("*a"):gsub("%s+", "")
+    handle:close()
+
+    return interpreter_path
+end
+
+local function get_ruff_path()
+    local handle = io.open("which ruff")
+
+    if handle == nil then
+        return ""
+    end
+
+    local ruff_path = handle:read("*a"):gsub("%s+", "")
+    handle:close()
+
+    return ruff_path
+end
+
 local map = function(lhs, rhs, desc, opts)
     vim.keymap.set('n', lhs, rhs, vim.tbl_deep_extend('force', { desc = 'LSP: ' .. desc }, opts or {}))
 end
@@ -36,15 +66,25 @@ local servers = {
             },
         },
     },
-
-    basedpyright = {
+    ruff_lsp = {
         settings = {
-            basedpyright = {
-                analysis = {
-                    typeCheckingMode = 'off',
-                    diagnosticMode = 'openFilesOnly',
-                },
+            ruff = {
+                interpreter = get_python_path(),
+                path = get_ruff_path()
             },
+
+        },
+    },
+    gopls = {
+        settings = {
+            cmd = {'gopls'},
+            experimentalPostfixCompletions = true,
+            analyses = {
+                unusedparams = true,
+                shadow = true,
+             },
+            staticcheck = true,
+            gofumpt = true,
         },
     },
 }
@@ -60,4 +100,3 @@ for server, config in pairs(servers) do
     config.capabilities = capabilities
     lspconfig[server].setup(config)
 end
-
