@@ -2,10 +2,10 @@ Info related to all the software currently in use.
 
 
 ### Terminal
-  - Emulator: [WezTerm](https://wezfurlong.org/wezterm/index.html)
+  - Emulator: [Ghostty](https://ghostty.org/docs)
   - Multiplexer: [Zellij](https://zellij.dev/)
   - Editor: Neovim
-    - Theme: SpaceDuck
+    - Theme: Kanagawa Wave
   - shell: [zsh](https://www.zsh.org/)
   - shell prompt editor: [Starship](https://starship.rs/)
   - LazyGit
