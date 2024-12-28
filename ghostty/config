@@ -1,0 +1,13 @@
+theme = Kanagawa Wave
+shell-integration = zsh
+font-family = "CaskaydiaMono Nerd Font"
+
+mouse-hide-while-typing = true
+
+shell-integration-features = no-cursor
+cursor-opacity = 0.2
+cursor-style = "block_hollow"
+
+quick-terminal-screen = "mouse"
+
+keybind = alt+q>t=toggle_quick_terminal
