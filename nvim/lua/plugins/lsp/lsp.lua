@@ -36,11 +36,10 @@ map('gs', vim.lsp.buf.hover, 'Hover')
 map('gS', vim.lsp.buf.signature_help, 'Signature Help')
 map('ga', vim.lsp.buf.code_action, 'Code Action')
 map('gR', vim.lsp.buf.rename, 'Rename Variable')
-
 map('gd', function()
     require('mini.extra').pickers.lsp({ scope = 'definition' })
 end, 'Goto Definition')
-
+map('gl', vim.diagnostic.open_float, 'Hover Diag')
 map('gr', function()
     require('mini.extra').pickers.lsp({ scope = 'references' })
 end, 'Goto References')
@@ -48,6 +47,10 @@ end, 'Goto References')
 map('<leader>li', '<cmd>LspInfo<CR>', 'LspInfo')
 map('<leader>lr', '<cmd>LspRestart<CR>', 'LspRestart')
 map('<leader>ll', '<cmd>LspLog<CR>', 'LspLog')
+
+map('<leader>td', function ()
+    vim.diagnostic.enable(not vim.diagnostic.is_enabled(), { bufnr = 0 })
+end, 'Toggle Diag')
 
 map('<leader>th', function()
     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -106,4 +109,5 @@ for server, config in pairs(servers) do
 end
 
 require('lspconfig.ui.windows').default_options = { border = 'single' }
+
 vim.cmd("LspStart")
