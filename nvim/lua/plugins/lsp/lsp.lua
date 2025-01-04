@@ -53,7 +53,6 @@ map('<leader>th', function()
     vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end, 'Toggle Inlay Hints')
 
-
 local servers = {
     lua_ls = {
         settings = {
@@ -66,13 +65,22 @@ local servers = {
             },
         },
     },
+    basedpyright = {
+        settings = {
+            basedpyright = {
+                analysis = {
+                    typeCheckingMode = 'off',
+                    diagnosticMode = 'openFilersOnly',
+                },
+            },
+        },
+    },
     ruff_lsp = {
         settings = {
             ruff = {
                 interpreter = get_python_path(),
                 path = get_ruff_path()
             },
-
         },
     },
     gopls = {
@@ -89,14 +97,13 @@ local servers = {
     },
 }
 
-local capabilities = vim.tbl_deep_extend(
-    'force',
-    vim.lsp.protocol.make_client_capabilities(),
-    require('cmp_nvim_lsp').default_capabilities()
-)
-
+local capabilities = vim.lsp.protocol.make_client_capabilities()
 local lspconfig = require('lspconfig')
 for server, config in pairs(servers) do
-    config.capabilities = capabilities
-    lspconfig[server].setup(config)
+  config.capabilities =
+    vim.tbl_deep_extend('force', capabilities, require('blink.cmp').get_lsp_capabilities(config.capabilities))
+  lspconfig[server].setup(config)
 end
+
+require('lspconfig.ui.windows').default_options = { border = 'single' }
+vim.cmd("LspStart")

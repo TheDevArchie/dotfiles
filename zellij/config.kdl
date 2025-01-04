@@ -6,6 +6,14 @@ keybinds clear-default=true {
 	normal {
         // Lock
         bind "Ctrl g" { SwitchToMode "Locked"; }
+        bind "Ctrl l" {
+            // https://github.com/zellij-org/zellij/discussions/2518
+            // ~/.config/zsh/scripts/zellij-lazygit
+            Run "zellij" "run" "--close-on-exit" "--floating" "--" "lazygit" {
+                close_on_exit true
+            }
+            SwitchToMode "Locked"
+        }
 
         // Pane
         bind "h" { MoveFocus "Left"; SwitchToMode "Locked"; }

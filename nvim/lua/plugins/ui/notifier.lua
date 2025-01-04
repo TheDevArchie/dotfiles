@@ -1,5 +1,5 @@
 require('notifier').setup({
     notify = {
-        clear_time = 10000,
+        clear_time = 1,
     }
 })

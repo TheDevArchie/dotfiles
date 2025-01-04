@@ -60,38 +60,38 @@ later(function()
         depends = { 'nvim-lua/plenary.nvim' }
     })
 
-    add({
-        source = 'ThePrimeagen/harpoon',
-        checkout = 'harpoon2',
-        depends = { 'nvim-lua/plenary.nvim' }
-    })
+    -- add({
+    --     source = 'ThePrimeagen/harpoon',
+    --     checkout = 'harpoon2',
+    --     depends = { 'nvim-lua/plenary.nvim' }
+    -- })
 
     -- lsp
     add({
         source = 'neovim/nvim-lspconfig',
         depends = {
-            'hrsh7th/cmp-nvim-lsp',
-            'folke/lazydev.nvim'
+            'folke/lazydev.nvim',
+            { source = 'saghen/blink.cmp', checkout = 'v0.9.0' },
         },
     })
-	add('ray-x/lsp_signature.nvim')
+	-- add('ray-x/lsp_signature.nvim')
 
     -- cmp
-    add({
-        source = 'hrsh7th/nvim-cmp',
-        depends = {
-            "hrsh7th/cmp-nvim-lsp",
-            -- "hrsh7th/cmp-nvim-lsp-signature-help",
-            "hrsh7th/cmp-path",
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-cmdline",
-            "hrsh7th/cmp-calc",
-            "dmitmel/cmp-cmdline-history",
-        }
-    })
+    -- add({
+    --     source = 'hrsh7th/nvim-cmp',
+    --     depends = {
+    --         "hrsh7th/cmp-nvim-lsp",
+    --         -- "hrsh7th/cmp-nvim-lsp-signature-help",
+    --         "hrsh7th/cmp-path",
+    --         "hrsh7th/cmp-buffer",
+    --         "hrsh7th/cmp-cmdline",
+    --         "hrsh7th/cmp-calc",
+    --         "dmitmel/cmp-cmdline-history",
+    --     }
+    -- })
 
-    vim.cmd('runtime! lua/plugins/lsp/lsp_signature.lua')
-
+    vim.cmd('runtime! lua/plugins/cmp/*')
+    -- vim.cmd('runtime! lua/plugins/lsp/lsp_signature.lua')
 
     -- editing
     add('roobert/f-string-toggle.nvim')
@@ -117,5 +117,5 @@ later(function()
 
 
     vim.cmd('runtime! lua/plugins/editing/*.lua')
-    vim.cmd('LspStart')
+    -- vim.cmd('LspStart')
 end)
