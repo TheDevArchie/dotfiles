@@ -32,13 +32,9 @@ now(function()
     -- add('0xstepit/flow.nvim')
     -- add('nyoom-engineering/oxocarbon.nvim')
     -- add('zootedb0t/citruszest.nvim')
-    add('pineapplegiant/spaceduck')
+    -- add('pineapplegiant/spaceduck')
     add("rebelot/kanagawa.nvim")
 
-    add({
-        source = 'folke/noice.nvim',
-        depends = { 'MunifTanjim/nui.nvim' },
-    })
     add('nvim-lualine/lualine.nvim')
     add('vigoux/notifier.nvim')
     add('goolord/alpha-nvim')
@@ -54,19 +50,12 @@ later(function()
         source = 'nvim-treesitter/nvim-treesitter',
         depends = { 'nvim-treesitter/nvim-treesitter-context' }
     })
-
     add({
         source = 'nvim-telescope/telescope.nvim',
         depends = { 'nvim-lua/plenary.nvim' }
     })
 
-    -- add({
-    --     source = 'ThePrimeagen/harpoon',
-    --     checkout = 'harpoon2',
-    --     depends = { 'nvim-lua/plenary.nvim' }
-    -- })
-
-    -- lsp
+    -- lsp + cmp
     add({
         source = 'neovim/nvim-lspconfig',
         depends = {
@@ -74,24 +63,9 @@ later(function()
             { source = 'saghen/blink.cmp', checkout = 'v0.9.0' },
         },
     })
-	-- add('ray-x/lsp_signature.nvim')
 
-    -- cmp
-    -- add({
-    --     source = 'hrsh7th/nvim-cmp',
-    --     depends = {
-    --         "hrsh7th/cmp-nvim-lsp",
-    --         -- "hrsh7th/cmp-nvim-lsp-signature-help",
-    --         "hrsh7th/cmp-path",
-    --         "hrsh7th/cmp-buffer",
-    --         "hrsh7th/cmp-cmdline",
-    --         "hrsh7th/cmp-calc",
-    --         "dmitmel/cmp-cmdline-history",
-    --     }
-    -- })
-
+    vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
     vim.cmd('runtime! lua/plugins/cmp/*')
-    -- vim.cmd('runtime! lua/plugins/lsp/lsp_signature.lua')
 
     -- editing
     add('roobert/f-string-toggle.nvim')
@@ -111,9 +85,11 @@ later(function()
     add('tamton-aquib/duck.nvim')
     add('norcalli/nvim-colorizer.lua')
 
+    -- ui
+    add('xzbdmw/colorful-menu.nvim')
+
     vim.cmd('runtime! lua/plugins/ui/*.lua')
     vim.cmd('runtime! lua/plugins/*.lua')
-    vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
 
 
     vim.cmd('runtime! lua/plugins/editing/*.lua')
