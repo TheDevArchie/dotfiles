@@ -55,6 +55,7 @@ later(function()
         depends = { 'nvim-lua/plenary.nvim' }
     })
 
+
     -- lsp + cmp
     add({
         source = 'neovim/nvim-lspconfig',
@@ -84,14 +85,13 @@ later(function()
     add('sitiom/nvim-numbertoggle')
     add('tamton-aquib/duck.nvim')
     add('norcalli/nvim-colorizer.lua')
-
-    -- ui
     add('xzbdmw/colorful-menu.nvim')
 
-    vim.cmd('runtime! lua/plugins/ui/*.lua')
-    vim.cmd('runtime! lua/plugins/*.lua')
-
-
     vim.cmd('runtime! lua/plugins/editing/*.lua')
+    vim.cmd('runtime! lua/plugins/*.lua')
+    vim.cmd('runtime! lua/plugins/ui/*.lua') -- Has to be executed after editing files
+                                             -- in order to Tele to work
+
+
     -- vim.cmd('LspStart')
 end)
