@@ -5,4 +5,5 @@
 --     aggressive_spell = false, -- Display colors for spell check.
 -- })
 
-vim.cmd('colorscheme kanagawa-wave')
+-- vim.cmd('colorscheme kanagawa-wave')
+vim.cmd('colorscheme morta')

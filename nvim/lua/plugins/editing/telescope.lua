@@ -26,10 +26,19 @@ telescope.setup({
                 ["jj"] = actions.close,
                 ["<Tab>"] = actions.move_selection_next,
                 -- ["<C-Tab>"] = actions.move_selection_previous, NOT WORKING
-                ["<Space>tp"] = layout.toggle_preview
+                ["<Space>tp"] = layout.toggle_preview,
             }
         },
         preview = { hide_on_startup = true }
+    },
+    pickers = {
+        buffers = {
+            mappings = {
+                i = {
+                    ["<c-z>"] = actions.delete_buffer,
+                }
+            }
+        }
     }
 })
 

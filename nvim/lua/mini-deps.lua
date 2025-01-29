@@ -34,6 +34,8 @@ now(function()
     -- add('zootedb0t/citruszest.nvim')
     -- add('pineapplegiant/spaceduck')
     add("rebelot/kanagawa.nvim")
+    add("philosofonusus/morta.nvim")
+
 
     add('nvim-lualine/lualine.nvim')
     add('vigoux/notifier.nvim')
@@ -67,6 +69,13 @@ later(function()
 
     vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
     vim.cmd('runtime! lua/plugins/cmp/*')
+
+    --HARPOON
+    add({
+        source = 'ThePrimeagen/harpoon',
+        branch = 'harpoon2',
+        depends = { 'nvim-lua/plenary.nvim'},
+    })
 
     -- editing
     add('roobert/f-string-toggle.nvim')
