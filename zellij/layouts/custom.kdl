@@ -29,6 +29,8 @@ layout {
         children
     }
     tab name=".config" cwd="~/.config"
-    tab name="projects" cwd="~/projects" focus=true
-    tab name="Messi" cwd="~/"
+    //tab name="projects" cwd="~/projects" focus=true
+    tab name="auth" cwd="~/projects/auth-api/"
+    tab name="dvp" cwd="~/projects/dvp-api/"
+    tab name="Messi" cwd="~/" focus=true
 }
