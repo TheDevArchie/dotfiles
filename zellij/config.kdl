@@ -6,12 +6,20 @@ keybinds clear-default=true {
 	normal {
         // Lock
         bind "Ctrl g" { SwitchToMode "Locked"; }
-        bind "Ctrl l" {
-            // https://github.com/zellij-org/zellij/discussions/2518
-            // ~/.config/zsh/scripts/zellij-lazygit
-            Run "zellij" "run" "--close-on-exit" "--floating" "--" "lazygit" {
+        bind "a" {
+            Run "lazygit" {
+                floating true
                 close_on_exit true
             }
+            // https://github.com/zellij-org/zellij/discussions/2518
+            // ~/.config/zsh/scripts/zellij-lazygit
+            //Run "zellij" "run" "--close-on-exit" "--floating" "--" "lazygit" {
+             //   close_on_exit true
+              //  size {
+               //     width "95%"
+                    //height "95%"
+               // }
+            //}
             SwitchToMode "Locked"
         }
 
@@ -35,6 +43,7 @@ keybinds clear-default=true {
         bind "X" { CloseTab; SwitchToMode "Locked"; }
         bind "n" { GoToNextTab; }
         bind "N" { GoToPreviousTab; }
+        bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
 
         // Sesh
         bind "d" { Detach; }
