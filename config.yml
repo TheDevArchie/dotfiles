@@ -1,0 +1,23 @@
+os:
+  editPreset: 'nvim'
+
+gui:
+  showPanelJumps: false
+  nerdFontsVersion: '3'
+  border: 'double'
+  theme:
+    activeBorderColor:
+      - '#c0caf5'
+      - bold
+    inactiveBorderColor:
+      - '#3b4261'
+    selectedLineBgColor:
+      - '#2e3c64'
+      - bold
+    defaultFgColor:
+      - '#c0caf5'
+  expandFocusedSidePanel: true
+git:
+  paging:
+    pager: delta --dark --paging=never
+notARepository: 'quit'
