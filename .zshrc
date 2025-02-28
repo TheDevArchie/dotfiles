@@ -2,9 +2,12 @@
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+source $HOME/.cargo/env
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export TERM="xterm-256color"
 eval "$(starship init zsh)"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -121,8 +124,8 @@ fi
 
 if command -v fzf >/dev/null 2>&1; then
     # Set up fzf key bindings and fuzzy completion
-    source <(fzf --zsh)
-    [ -f $CONFIG/fzf/.fzf.zsh ] && source "$CONFIG/fzf/.fzf.zsh"
+    # [ -f $CONFIG/fzf/.fzf.zsh ] && source "$CONFIG/fzf/.fzf.zsh"
+    source "$CONFIG/fzf/.fzf.zsh"
 fi
 
 alias home="cd ~"
@@ -142,9 +145,30 @@ if command -v zellij >/dev/null 2>&1; then
 	alias zz="zellij"
 fi
 
+if command -v lazygit >/dev/null 2>&1; then
+	alias lg="lazygit"
+fi
+
+# alias python3="$HOME/.local/share/uv/python/cpython-3.12.8-macos-aarch64-none/bin/python3.12"
+# alias pip3="$HOME/.local/share/uv/python/cpython-3.12.8-macos-aarch64-none/bin/pip3"
 # if command -v python3.12 >/dev/null 2>&1; then
 #     alias python3="python3.12"
+#     alias pip3="pip3.12"
 # fi
 
+alias sac="source .venv/bin/activate"
 alias py=python3
+
+alias_directory="$CONFIG/zsh/alias"
+if [ -d $alias_directory ]; then
+    for file in "$alias_directory"/*; do
+       echo $file
+      [ -r "$file" ] && source "$file"
+    done
+fi
+
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# bindkey '^I' fzf-completion
+# bindkey '^I' autosuggest-accept
