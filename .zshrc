@@ -169,6 +169,3 @@ fi
 
 source $HOME/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# bindkey '^I' fzf-completion
-# bindkey '^I' autosuggest-accept
