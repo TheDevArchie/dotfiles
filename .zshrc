@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:/usr/local/go/bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
-
-export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
-source $HOME/.cargo/env
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -130,6 +127,10 @@ fi
 
 alias home="cd ~"
 
+
+if command -v lazygit >/dev/null 2>&1; then
+	alias lg="lazygit"
+fi
 
 # REMAPS
 if command -v bat >/dev/null 2>&1; then
