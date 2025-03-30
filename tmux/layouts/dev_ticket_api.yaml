@@ -1,0 +1,20 @@
+session_name: dev_ticket_api
+windows:
+  - window_name: ".config"
+    start_directory: "~/.config/"
+
+  - window_name: "Neo"
+    panes:
+      - shell_command:
+        - nvim ~/git/dev_ticket_api/
+
+  - window_name: "Test"
+    panes:
+      - shell_command:
+        - cd ~/git/dev_ticket_api
+        - clear
+        - echo pane for ngrok
+      - shell_command:
+        - cd ~/git/dev_ticket_api
+        - clear
+        - echo pane for 'docker compose'

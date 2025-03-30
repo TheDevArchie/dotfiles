@@ -1,0 +1,9 @@
+session_name: dvp
+windows:
+  - window_name: ".config"
+    start_directory: "~/.config/"
+
+  - window_name: "Neo"
+    panes:
+      - shell_command:
+        - nvim ~/git/dvp-api/
