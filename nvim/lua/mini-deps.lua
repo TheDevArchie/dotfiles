@@ -32,7 +32,7 @@ now(function()
     -- add('0xstepit/flow.nvim')
     -- add('nyoom-engineering/oxocarbon.nvim')
     -- add('zootedb0t/citruszest.nvim')
-    -- add('pineapplegiant/spaceduck')
+    add('pineapplegiant/spaceduck')
     add("rebelot/kanagawa.nvim")
     add("philosofonusus/morta.nvim")
 
@@ -68,6 +68,8 @@ later(function()
     })
 
     vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
+    vim.cmd('runtime! lua/plugins/lsp/nvim-treesitter.lua')
+    vim.cmd('runtime! lua/plugins/lsp/nvim-treesitter-context.lua')
     vim.cmd('runtime! lua/plugins/cmp/*')
 
     --HARPOON
