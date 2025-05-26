@@ -78,7 +78,7 @@ end
 
 
 -- KeyMaps
-vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Files" })
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find Project Files" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find Buffers" })
 vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Recent Files" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Search Help" })
@@ -88,7 +88,7 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Search By Grep" }
 vim.keymap.set("n", "<leader>fn", function()
     builtin.find_files { cwd = vim.fn.stdpath "config" }
 end, { desc = "Search Neovim Files" })
-vim.keymap.set("n", "<leader>fp", function()
-    builtin.find_files { cwd = vim.env.HOME .. "/projects" }
-end, { desc = "Search projects" })
+vim.keymap.set("n", "<leader>fu", function()
+    builtin.find_files { cwd = vim.env.HOME }
+end, { desc = "Search User Dir" })
 

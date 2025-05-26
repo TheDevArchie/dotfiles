@@ -6,4 +6,4 @@
 -- })
 
 -- vim.cmd('colorscheme kanagawa-wave')
-vim.cmd('colorscheme morta')
+vim.cmd('colorscheme material-deep-ocean')

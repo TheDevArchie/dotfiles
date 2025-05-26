@@ -1,4 +1,4 @@
-    dashboard = require("alpha.themes.dashboard")
+    local dashboard = require("alpha.themes.dashboard")
     local logo = "Snoretown Welcomes You!"
 
     local header = dashboard.section.header

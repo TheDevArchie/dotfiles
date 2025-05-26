@@ -9,6 +9,10 @@ require("dial.config").augends:register_group({
             cyclic = false,
         }),
         augend.constant.new({
+            elements = { "False", "True" },
+            cyclic = false,
+        }),
+        augend.constant.new({
             elements = { "no", "yes" },
             cyclic = false,
         }),

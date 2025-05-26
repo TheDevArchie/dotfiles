@@ -5,6 +5,7 @@ export PATH=/opt/homebrew/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM="xterm-256color"
+export XDG_CONFIG_HOME="$HOME/.config"
 eval "$(starship init zsh)"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -148,6 +149,10 @@ fi
 
 if command -v lazygit >/dev/null 2>&1; then
 	alias lg="lazygit"
+fi
+
+if command -v yazi >/dev/null 2>&1; then
+    alias yy="yazi"
 fi
 
 # alias python3="$HOME/.local/share/uv/python/cpython-3.12.8-macos-aarch64-none/bin/python3.12"

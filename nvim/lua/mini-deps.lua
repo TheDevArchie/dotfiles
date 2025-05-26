@@ -32,7 +32,8 @@ now(function()
     -- add('0xstepit/flow.nvim')
     -- add('nyoom-engineering/oxocarbon.nvim')
     -- add('zootedb0t/citruszest.nvim')
-    add('pineapplegiant/spaceduck')
+    -- add('pineapplegiant/spaceduck')
+    add('marko-cerovac/material.nvim')
     add("rebelot/kanagawa.nvim")
     add("philosofonusus/morta.nvim")
 
@@ -66,6 +67,7 @@ later(function()
             { source = 'saghen/blink.cmp', checkout = 'v0.9.0' },
         },
     })
+    add("stevanmilic/nvim-lspimport")
 
     vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
     vim.cmd('runtime! lua/plugins/lsp/nvim-treesitter.lua')

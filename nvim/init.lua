@@ -20,5 +20,5 @@ safe_require("mini-deps")
 --     Constant = { fg = "#FFFFFF", bold = true}
 --     },
 -- })
---
+
 print("Welcome to SnoreTown")

@@ -6,15 +6,15 @@ windows:
   - window_name: "Neo"
     panes:
       - shell_command:
-        - nvim ~/git/dev_ticket_api/
+        - nvim ~/git/development-ticket-api/
 
   - window_name: "Test"
     panes:
       - shell_command:
-        - cd ~/git/dev_ticket_api
+        - cd ~/git/development-ticket-api/
         - clear
         - echo pane for ngrok
       - shell_command:
-        - cd ~/git/dev_ticket_api
+        - cd ~/git/development-ticket-api/
         - clear
         - echo pane for 'docker compose'
