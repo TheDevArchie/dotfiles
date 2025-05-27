@@ -1,0 +1,35 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            // https://github.com/dj95/zjstatus?tab=readme-ov-file
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                format_left "{datetime}"
+                format_center "{mode}"
+                format_right  "{tabs}"
+
+                // mode
+                mode_default_to_mode "locked"
+                mode_normal          "zellij…"
+                mode_rename_tab      "#[bg=white, fg=black] rename tab…"
+                mode_locked          ""
+                // tabs
+                tab_normal "#[fg=#1b1c36, bg=#686f9a,italic]{name} {floating_indicator}{fullscreen_indicator}{sync_indicator}"
+                tab_active "#[fg=#686f9a, bg=#1b1c36,bold] {name}{floating_indicator}{fullscreen_indicator}{sync_indicator}"
+
+                tab_sync_indicator       " 󰓦"
+                tab_fullscreen_indicator " 󰊓"
+                tab_floating_indicator   " 󰉈"
+                tab_separator            "    "
+
+                datetime "#[fg=#686f9a,bold] {format}"
+                datetime_format "%H:%M"
+                datetime_timezone "America/Chicago"
+            }
+        }
+        children
+    }
+    tab name=".config" cwd="~/.config"
+    tab name="dvp" cwd="~/git/dvp-api/"
+    tab name="Test" cwd="~/"
+    tab name="Messi" cwd="~/" focus=true
+}
