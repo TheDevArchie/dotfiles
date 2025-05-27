@@ -2,14 +2,14 @@ theme = spaceduck
 shell-integration = zsh
 
 font-family = "CaskaydiaMono Nerd Font"
-font-size = 14
+font-size = 16
 
 mouse-hide-while-typing = true
 
 shell-integration-features = no-cursor
-cursor-opacity = 0.2
-cursor-style = "block_hollow"
-
+cursor-opacity = 0.5
+cursor-style = "underline"
+background-opacity = 0.92
 quick-terminal-screen = "mouse"
 
 keybind = alt+q>t=toggle_quick_terminal
