@@ -38,4 +38,18 @@ themes {
         orange "#f7c67f"
         cyan "#91d7e3" // Sky
     }
+    monokai {
+        bg "#272822"
+        fg "#F8F8F2"
+        red "#F92672"
+        green "#A6E22E"
+        blue "#66D9EF"
+        yellow "#F4BF75"
+        magenta "#AE81FF"
+        black "#000000"
+        white "#F8F8F2"
+        orange "#FF9F00" // Bright orange variant
+        cyan "#A1EFE4" // Light cyan
+    }
+
 }
