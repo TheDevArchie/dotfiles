@@ -30,6 +30,7 @@
 --     c = { fg = colors.white },
 --   },
 -- }
+-- TODO: Shorten git branch , remove the line length/width (right hand side)
 require('lualine').setup({
     options = {
         section_separators = { left = '', right = '' },

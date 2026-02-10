@@ -58,6 +58,8 @@ later(function()
         depends = { 'nvim-lua/plenary.nvim' }
     })
 
+    add({source = 'lewis6991/gitsigns.nvim'})
+
 
     -- lsp + cmp
     add({

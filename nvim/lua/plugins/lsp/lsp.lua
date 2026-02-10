@@ -285,18 +285,18 @@ local servers = {
     basedpyright = {
         settings = {
             basedpyright = {
-                analysis = {
-                    typeCheckingMode = 'off',
-                    diagnosticMode = 'openFilersOnly',
-                },
+                -- analysis = {
+                --     typeCheckingMode = 'off',
+                --     diagnosticMode = 'openFilersOnly',
+                -- },
             },
         },
     },
     ruff = {
         init_options = {
-            settings = {
-                logLevel = 'debug',
-            },
+            -- settings = {
+            --     logLevel = 'debug',
+            -- },
         },
     },
     -- ruff_lsp = {
