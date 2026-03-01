@@ -3,34 +3,48 @@ layout {
         pane size=1 borderless=true {
             // https://github.com/dj95/zjstatus?tab=readme-ov-file
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-                format_left "{datetime}"
-                format_center "{mode}"
-                format_right  "{tabs}"
+                format_left  "#[fg=black,bg=blue,bold]>> {session}#[fg=blue,bg=#1a1a1a]"
+                format_right "#[fg=blue,bg=#1a1a1a]{tabs}"
+                format_center "#[fg=#e87d3e,bg=#1a1a1a]{mode}"
+                format_space "#[bg=#1a1a1a]"
+
+                hide_frame_for_single_pane "true"
+
+                mode_normal  "#[bg=blue] "
+
+                tab_normal              "#[bg=##1a1a1a,fg=#409ddd, italic]#[fg=#1a1a1a,bg=#409ddd, italic]{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}#[fg=#409ddd,bg=#1a1a1a] "
+                tab_active              "#[fg=#e87d3e,bg=#1a1a1a]#[fg=#1a1a1a,bg=#e87d3e,bold,italic]{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}#[fg=#e87d3e,bg=#1a1a1a] "
 
                 // mode
                 mode_default_to_mode "locked"
                 mode_normal          "zellij…"
-                mode_rename_tab      "#[bg=white, fg=black] rename tab…"
+                mode_rename_tab      "#[fg=#e87d3e] rename tab…"
                 mode_locked          ""
-                // tabs
-                tab_normal "#[fg=#1b1c36, bg=#686f9a,italic]{name} {floating_indicator}{fullscreen_indicator}{sync_indicator}"
-                tab_active "#[fg=#686f9a, bg=#1b1c36,bold] {name}{floating_indicator}{fullscreen_indicator}{sync_indicator}"
 
-                tab_sync_indicator       " 󰓦"
+                // tab
+                tab_sync_indicator       " 󰓦 "
                 tab_fullscreen_indicator " 󰊓"
                 tab_floating_indicator   " 󰉈"
-                tab_separator            "    "
-
-                datetime "#[fg=#686f9a,bold] {format}"
+                
+                // datetime
+                datetime "#[fg=#409ddd,bold] {format}"
                 datetime_format "%H:%M"
                 datetime_timezone "America/Chicago"
             }
         }
         children
     }
-    tab name=".config" cwd="~/.config"
-    //tab name="projects" cwd="~/projects" focus=true
-    // tab name="auth" cwd="~/s/auth-api/"
-    tab name="dvp" cwd="~/git/dvp-api/"
-    tab name="Messi" cwd="~/" focus=true
+    tab name="Code" focus=true {
+        pane split_direction="horizontal" size="70%" {
+            pane split_direction="vertical" {
+                pane size="70%" name="" command="nvim" cwd="~/git/dvp-api/" focus=true
+                pane name="󱚝" command="claude" cwd="~/git/dvp-api/"
+            }
+        }
+
+        pane size="23%" name="󰊠" cwd="~/git/dvp-api/"
+
+    }
+    tab name="Messi" cwd="~/"
+    tab name="dotfiles" cwd="~/.config"
 }
