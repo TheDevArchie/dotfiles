@@ -3,17 +3,17 @@ layout {
         pane size=1 borderless=true {
             // https://github.com/dj95/zjstatus?tab=readme-ov-file
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-                format_left  "#[fg=black,bg=blue,bold]>> {session}#[fg=blue,bg=#1a1a1a]"
-                format_right "#[fg=blue,bg=#1a1a1a]{tabs}"
-                format_center "#[fg=#e87d3e,bg=#1a1a1a]{mode}"
-                format_space "#[bg=#1a1a1a]"
+                format_left  "#[fg=black,bg=blue,bold]>> {session}#[fg=blue]"
+                format_right "#[fg=blue]{tabs}"
+                format_center "#[fg=#e87d3e]{mode}"
+                format_space "#[]"
 
                 hide_frame_for_single_pane "true"
 
                 mode_normal  "#[bg=blue] "
 
-                tab_normal              "#[bg=##1a1a1a,fg=#409ddd, italic]#[fg=#1a1a1a,bg=#409ddd, italic]{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}#[fg=#409ddd,bg=#1a1a1a] "
-                tab_active              "#[fg=#e87d3e,bg=#1a1a1a]#[fg=#1a1a1a,bg=#e87d3e,bold,italic]{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}#[fg=#e87d3e,bg=#1a1a1a] "
+                tab_normal              "#[fg=#f2fffc, italic]#[fg=#3a4449, italic]{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}#[fg=#f2fffc] "
+                tab_active              "#[fg=#f2fffc,]#[bg=#f2fffc,fg=#e87d3e,bold,italic]{name}{floating_indicator}{fullscreen_indicator}{sync_indicator}#[fg=#f2fffc] "
 
                 // mode
                 mode_default_to_mode "locked"
