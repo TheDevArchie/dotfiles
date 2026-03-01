@@ -1,14 +1,6 @@
-"$schema" = 'https://starship.rs/config-schema.json'
-
-# Insert a blank line between shell prompts
-add_newline = true
-
-# Increase the default command timeout to 2 seconds
-command_timeout = 2000
-
-# Define the order and format of the information in our prompt
+# Define the prompt format with separators and styles
 format = """\
-[](fg:#3B76F0)\
+[](fg:#FF6F61)\
 $directory\
 ${custom.directory_separator_not_git}\
 ${custom.directory_separator_git}\
@@ -29,10 +21,11 @@ disabled = true
 [directory]
 truncate_to_repo = true
 format = "[ $path ]($style)"
-style = "bg:#3B76F0"
+style = "bg:#FF6F61"
 truncation_length = 3
 truncation_symbol = "…/"
 
+# Directory substitutions for visual elements
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
@@ -40,14 +33,17 @@ truncation_symbol = "…/"
 "Pictures" = " "
 ".config" = " "
 
+# Configure the git branch display
 [git_branch]
 symbol = " "
 format = "[ $symbol$branch(:$remote_branch) ]($style)"
 style = "fg:#1C3A5E bg:#FCF392"
 
+# Enable git metrics display
 [git_metrics]
 disabled = false
 
+# Package version display settings
 [package]
 disabled = true # Enable to output the current working directory's package version
 format = "[$symbol$version]($style) "
@@ -72,7 +68,7 @@ style = "text"
 [custom.directory_separator_git]
 description = "Output a styled separator right after the directory when inside a git repository."
 command = ""
-format = "[](fg:#3B76F0 bg:#FCF392)"
+format = "[](fg:#FF6F61 bg:#FCF392)"
 # Only when inside git repository
 when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
 
@@ -80,7 +76,7 @@ when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
 [custom.directory_separator_not_git]
 description = "Output a styled separator right after the directory when NOT inside a git repository."
 command = ""
-format = "[](fg:#3B76F0)"
+format = "[](fg:#FF6F61)"
 # Only when NOT inside a git repository
 when = "! git rev-parse --is-inside-work-tree > /dev/null 2>&1"
 
