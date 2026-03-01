@@ -1,4 +1,5 @@
 Info related to all the software currently in use.
+<img width="1507" height="944" alt="image" src="https://github.com/user-attachments/assets/af54985f-3440-4317-834d-258945563123" />
 
 
 ### Terminal
