@@ -18,7 +18,7 @@ files.setup({
     },
 })
 
-vim.keymap.set('n', '<leader>ev', function()
+vim.keymap.set('n', '<leader>me', function()
     files.open(files.get_latest_path())
 end, { desc = 'Explore (Latest Path)' })
 
