@@ -5,7 +5,7 @@ Info related to all the software currently in use.
   - Emulator: [Ghostty](https://ghostty.org/docs)
   - Multiplexer: [Zellij](https://zellij.dev/)
   - Editor: Neovim
-    - Theme: Kanagawa Wave
+    - Theme: Monokai
   - shell: [zsh](https://www.zsh.org/)
   - shell prompt editor: [Starship](https://starship.rs/)
   - LazyGit
@@ -23,7 +23,6 @@ Info related to all the software currently in use.
   - [RayCast](https://www.raycast.com/)
   - [AppCleaner](https://freemacsoft.net/appcleaner/)
   - AltTab
-  - HammerSpoon
 
 
 ### How To
