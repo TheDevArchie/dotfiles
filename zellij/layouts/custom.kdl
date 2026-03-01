@@ -37,7 +37,9 @@ layout {
     tab name="Code" focus=true {
         pane split_direction="horizontal" size="70%" {
             pane split_direction="vertical" {
-                pane size="70%" name="" command="nvim" cwd="~/git/dvp-api/" focus=true
+                pane size="70%" name="" command="zsh" {
+                    args "-c" "source ~/git/dvp-api/.venv/bin/activate && nvim ~/git/dvp-api/"
+                }
                 pane name="󱚝" command="claude" cwd="~/git/dvp-api/"
             }
         }
