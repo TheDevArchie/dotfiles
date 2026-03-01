@@ -37,6 +37,7 @@ opt.pumheight = 5
 opt.signcolumn = "yes"
 opt.cursorline = true
 opt.ruler = false
+vim.o.winborder = 'rounded'
 
 opt.splitright = true
 opt.splitbelow = true

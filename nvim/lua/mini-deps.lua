@@ -33,9 +33,12 @@ now(function()
     -- add('nyoom-engineering/oxocarbon.nvim')
     -- add('zootedb0t/citruszest.nvim')
     -- add('pineapplegiant/spaceduck')
+    add("loctvl842/monokai-pro.nvim")
     add('marko-cerovac/material.nvim')
     add("rebelot/kanagawa.nvim")
     add("philosofonusus/morta.nvim")
+    add('folke/snacks.nvim')
+    -- require('plugins.snacks')
 
 
     add('nvim-lualine/lualine.nvim')
@@ -70,18 +73,20 @@ later(function()
         },
     })
     add("stevanmilic/nvim-lspimport")
+    add("rachartier/tiny-inline-diagnostic.nvim")
 
     vim.cmd('runtime! lua/plugins/lsp/lsp.lua')
     vim.cmd('runtime! lua/plugins/lsp/nvim-treesitter.lua')
     vim.cmd('runtime! lua/plugins/lsp/nvim-treesitter-context.lua')
+    vim.cmd('runtime! lua/plugins/lsp/tiny-inline-diagnostics.lua')
     vim.cmd('runtime! lua/plugins/cmp/*')
 
     --HARPOON
-    add({
-        source = 'ThePrimeagen/harpoon',
-        branch = 'harpoon2',
-        depends = { 'nvim-lua/plenary.nvim'},
-    })
+    -- add({
+    --     source = 'ThePrimeagen/harpoon',
+    --     branch = 'harpoon2',
+    --     depends = { 'nvim-lua/plenary.nvim'},
+    -- })
 
     -- editing
     add('roobert/f-string-toggle.nvim')
@@ -108,5 +113,5 @@ later(function()
                                              -- in order to Tele to work
 
 
-    -- vim.cmd('LspStart')
+    vim.cmd('LspStart')
 end)

@@ -5,5 +5,5 @@
 --     aggressive_spell = false, -- Display colors for spell check.
 -- })
 
--- vim.cmd('colorscheme kanagawa-wave')
-vim.cmd('colorscheme material-deep-ocean')
+-- vim.cmd('olorscheme kanagawa-wave')
+vim.cmd('colorscheme monokai-pro-machine')
