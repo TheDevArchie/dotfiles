@@ -1,4 +1,4 @@
-theme = spaceduck
+theme = Monokai Soda
 shell-integration = zsh
 
 font-family = "CaskaydiaMono Nerd Font"
@@ -9,7 +9,9 @@ mouse-hide-while-typing = true
 shell-integration-features = no-cursor
 cursor-opacity = 0.5
 cursor-style = "underline"
-background-opacity = 0.92
+background-opacity = 0.96
 quick-terminal-screen = "mouse"
+custom-shader-animation=true
+custom-shader=~/.config/ghostty/blazing_shader.glsl
 
 keybind = alt+q>t=toggle_quick_terminal
