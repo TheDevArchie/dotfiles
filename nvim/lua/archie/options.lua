@@ -45,4 +45,4 @@ opt.splitbelow = true
 -- Midnight Special
 opt.swapfile = false
 
-
+opt.clipboard = "unnamedplus"
